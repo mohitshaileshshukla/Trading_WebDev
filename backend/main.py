@@ -2,12 +2,12 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, and_
-from database import get_session, engine, Base
-from models import User, Portfolio, Transaction, Stock
-from schemas import UserCreate, UserLogin, Token, TradeRequest
-from auth import get_password_hash, verify_password, create_access_token, get_current_user
+from .database import get_session, engine, Base
+from .models import User, Portfolio, Transaction, Stock
+from .schemas import UserCreate, UserLogin, Token, TradeRequest
+from .auth import get_password_hash, verify_password, create_access_token, get_current_user
 from datetime import timedelta
-from config import settings
+from .config import settings
 
 app = FastAPI(title="ProfNITT Trading Platform API")
 
