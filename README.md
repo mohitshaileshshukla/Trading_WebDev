@@ -102,6 +102,7 @@ VITE_API_URL=http://localhost:8000
 ## Deployment URLs
 
 Frontend (Vercel): https://trading-web-dev.vercel.app
+
 Backend (Render): https://your-backend.onrender.com
 
 ## License
