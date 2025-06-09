@@ -12,7 +12,7 @@ interface AuthState {
 }
 
 // Backend base URL (adjust if needed)
-const API_URL = 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,

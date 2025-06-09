@@ -39,9 +39,9 @@ def generate_trading_signals(
     
     # Moving Average Signal
     if ma9:
-        if current_price > ma9 
+        if current_price > ma9: 
             signals["ma_signal"] = "buy"
-        elif current_price < ma9
+        elif current_price < ma9:
             signals["ma_signal"] = "sell"
     
     # RSI Signal
@@ -52,9 +52,9 @@ def generate_trading_signals(
             signals["rsi_signal"] = "buy"
     
     # Overall Signal
-    if signals["ma_signal"] == "buy" and signals["rsi_signal"]='sell':
+    if signals["ma_signal"] == "buy" and signals["rsi_signal"]=='sell':
         signals["overall_signal"] = "buy"
-    elif signals["ma_signal"] == "sell" and signals["rsi_signal"]='sell':
+    elif signals["ma_signal"] == "sell" and signals["rsi_signal"]=='sell':
         signals["overall_signal"] = "sell"
     
     return signals
